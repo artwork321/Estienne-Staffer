@@ -197,33 +197,24 @@ public class CharacterSprite : Character
 
     public Sprite GetEmotionSprite(string emotion) {
         string folderName = "Graphics/Characters";
-        string path =  "Assets/_MAIN/Resources/" + folderName;
 
-        string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
+        // Load all sprites in the folder
+        Sprite[] sprites = Resources.LoadAll<Sprite>(folderName);
 
-        // Load only image of the given character
-        foreach (string file in files) {
-            string fileName = Path.GetFileNameWithoutExtension(file);
-            string[] components = fileName.Split("_");
+        // Find the sprite that matches the character name and emotion
+        foreach (Sprite sprite in sprites) {
+            string[] components = sprite.name.Split('_');
             if (components.Length < 2) {
-                Debug.LogWarning("Invalid image name");
+                Debug.LogWarning("Invalid sprite name: " + sprite.name);
                 continue;
             }
 
-            if (components[0] == charName && components[1].ToLower() == emotion &&
-                (file.EndsWith(".png") || file.EndsWith(".jpg") || file.EndsWith(".jpeg"))) {
-                Sprite sprite = Resources.Load<Sprite>(folderName + "/" + fileName);
-                
-                if (sprite == null) {
-                    Debug.LogError("Failed to load image for " + charName + " with expression " + emotion);
-                    return null;
-                }
-
+            if (components[0] == charName && components[1].ToLower() == emotion.ToLower()) {
                 return sprite;
             }
         }
 
-        Debug.LogError("Could not find image for " + charName + " with expression " + emotion);
+        Debug.LogError("Could not find sprite for " + charName + " with emotion " + emotion);
         return null;
     }
 
