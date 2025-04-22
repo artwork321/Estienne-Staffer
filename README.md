@@ -7,7 +7,7 @@
 ## 🧩 Project Overview
 
 Estienne is a mystery visual novel game developed in Unity, featuring a branching narrative system powered by Ink.
-![Itch.io](https://lillianvz.itch.io/staffer-estienne)
+Itch.io: https://lillianvz.itch.io/staffer-estienne
 Password: staffercase
 
 ## 📸 Screenshots
