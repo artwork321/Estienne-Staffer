@@ -6,14 +6,12 @@
 
 ## 🧩 Project Overview
 
-Estienne is a mystery visual novel game developed in Unity, featuring a branching narrative system powered by Ink. The game blends classic visual novel storytelling with interactive features like dialogue choices and scene transitions.
+Estienne is a mystery visual novel game developed in Unity, featuring a branching narrative system powered by Ink.
 
 ## 📸 Screenshots
 ![Dialogue Scene1](screenshot/dialogue_scene1.png)
 ![Clue Scene](screenshot/clue_scene1.png)
 ![Investigate Scene](screenshot/investigation_scene1.png)
-
-> 💡 *Tip: Make sure to place your screenshots in a `screenshots/` folder at the root of your repo.*
 
 ## 🛠️ What I Did
 
@@ -26,6 +24,6 @@ Estienne is a mystery visual novel game developed in Unity, featuring a branchin
 
 ## 🚧 Future Plans
 
-- Add investigation mode interactions  
-- Implement argument/battle system  
-- Add save/load and options menu
+- Add Main Menu Scene
+- Add save/load feature
+- Fix bugs
